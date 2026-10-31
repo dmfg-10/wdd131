@@ -123,12 +123,9 @@ main h1{
 	
 .card.left .flag{
 	 width: 150px; 
-	 height: auto;         
-   
+	 height: auto;
 	margin: 
 	0 0 3rem 3rem; 
-	    
-    height: auto;
     border: 1px solid #ddd;
     grid-column: 1 / 2;
 
