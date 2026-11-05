@@ -48,6 +48,9 @@ header {
     padding: 0.5rem 1rem;
 }
 
+nav{
+    display: flex;
+}
 
 #menu-button {
     display: block;
@@ -66,9 +69,7 @@ header {
     gap: 0;
 }
 
-.navigation nav{
-    display: flex;
-}
+
 
 .navigation a {
     display: block;
