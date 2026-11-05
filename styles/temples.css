@@ -10,6 +10,7 @@
 :root {
     --main-color: rgb(4, 165, 223);
     --secondary-color: rgb(33, 104, 120);
+    --text-header-color: rgb(255, 255, 255);
     --border-radius: 8px;
 }
 
@@ -27,17 +28,22 @@ h1 {
 
 header {
     background-color: var(--main-color);
-    color: #fff;
+    color: var(--text-header-color);
 }
 
 main {
     max-width: 900px;
     margin: 0 auto;
 }
+ p {
+    color: var(--text-header-color);
+    font-weight: 1000;
+    font-size: 1.3rem;
+}
 
 /* -------- NAVIGATION - MOBILE -------- */
 
-.navigation {
+header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -46,17 +52,12 @@ main {
     padding: 0.5rem 1rem;
 }
 
-.navigation .logo {
-    color: #eee;
-    font-weight: 1000;
-    font-size: 1.3rem;
-}
 
 #menu-button {
     display: block;
     background: transparent;
     border: none;
-    color: white;
+    color: var(--text-header-color);
     font-size: 2rem;
     cursor: pointer;
 }
@@ -75,7 +76,7 @@ main {
 
 .navigation a {
     display: block;
-    color: #eee;
+    color: var(--text-header-color);
     padding: 0.8rem;
     font-weight: 700;
     text-decoration: none;
@@ -125,5 +126,5 @@ footer {
 footer p {
     margin: 0.2rem;
     font-size: 1rem;
-    color: #fff;
+    color: var(--text-header-color);
 }
