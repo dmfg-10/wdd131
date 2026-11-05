@@ -8,7 +8,7 @@
 }
 
 :root {
-    --main-color: rgb(4, 165, 223);
+    --main-color: rgb(3, 109, 147);
     --secondary-color: rgb(33, 104, 120);
     --text-header-color: rgb(255, 255, 255);
     --border-radius: 8px;
@@ -26,17 +26,12 @@ h1 {
     padding: 0.5rem;
 }
 
-header {
-    background-color: var(--main-color);
-    color: var(--text-header-color);
-}
 
 main {
     max-width: 900px;
     margin: 0 auto;
 }
  p {
-    color: var(--text-header-color);
     font-weight: 1000;
     font-size: 1.3rem;
 }
@@ -49,6 +44,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--main-color);
+    color: var(--text-header-color);
     padding: 0.5rem 1rem;
 }
 
