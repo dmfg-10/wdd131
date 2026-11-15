@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Daniel Forero">
+    <meta name="description" content="This is a page for the city where I live, Bogotá, Colombia.">
+   
+    <script src="scripts/place.js" defer></script>
+   
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Bogotá</title>
+</head>
+<body>
+    <header>
+        <h1>Bogotá, Colombia</h1>
+    </header>
+  
+<main>
+    <img
+        src="images/bogota-800.webp"
+        srcset="
+            images/bogota-400.webp 400w,
+            images/bogota-800.webp 800w,
+            images/bogota-1200.webp 1200w
+        "
+        sizes="100vw"
+        alt="Panorámica de Bogotá"
+        class="city-image"
+    >
+
+    <section class="card data">
+        <h2>DATA</h2>
+        <ul>
+            <li>
+                <span class="label">Area:</span>
+                <span class="value">1,587 km²</span>
+            </li>
+            <li>
+                <span class="label">Population:</span>
+                <span class="value">7,449,385</span>
+            </li>
+            <li>
+                <span class="label">Foundation date:</span>
+                <span class="value">1538</span>
+            </li>
+            <li>
+                <span class="label">Language:</span>
+                <span class="value">Spanish</span>
+            </li>
+            <li>
+                <span class="label">Calling Code:</span>
+                <span class="value">+57</span>
+            </li>
+            <li>
+                <span class="label">Currency:</span>
+                <span class="value">Colombian Peso</span>
+            </li>
+            <li>
+                <span class="label">Time zone:</span>
+                <span class="value">UTC-5</span>
+            </li>
+        </ul>
+    </section>
+
+    <section class="card weather">
+        <div class="weather-heading">
+            <h2>WEATHER</h2>
+            <img
+                src="images/weather-icon.svg"
+                alt="Weather icon"
+                class="weather-icon"
+            >
+        </div>
+
+        <ul>
+            <li>
+                <span class="label">Temperature:</span>
+                <span id="temperature">20°C</span>
+            </li>
+            <li>
+                <span class="label">Conditions:</span>
+                <span class="value">Sunny</span>
+            </li>
+            <li>
+                <span class="label">Wind:</span>
+                <span id="windSpeed">5 km/h</span>
+            </li>
+            <li>
+                <span class="label">Wind Chill:</span>
+                <span id="windChill">N/A</span>
+            </li>
+        </ul>
+    </section>
+</main>
+
+
+    <footer>
+
+        <p>&copy; <span id="currentyear"></span> ☀️ Daniel Forero ☀️ Bogotá, Colombia </p>
+        <p id="lastModified"> Last Modified: <span id="modifiedDate"></span></p>
+    
+    </footer>
+</body>
+</html>
