@@ -1,0 +1,274 @@
+/* -------- GENERAL -------- */
+
+/* ---------- GLOBAL SETTINGS ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: rgb(123, 126, 53);
+    --secondary-color: rgb(82, 22, 49);
+    --text-header-color: rgb(116, 111, 47);
+    --primary-text-color: rgb(255, 255, 255);
+    --secondary-text-color: rgb(0, 0, 0);
+    --border-radius: 8px;
+    --font-family: "Lato", sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    background-image: url("/project/images/top-view-arepas.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    text-align: center;
+    background-color: var(--main-color);
+    color: var(--primary-text-color);
+}
+
+h1 {
+    font-weight: 700;
+    margin: 0.5rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+/* ---------- NAVIGATION ---------- */
+/* Navigation */
+
+nav {
+    width: 100%;
+    background-color: var(--main-color);
+}
+
+#menu-button {
+    display: none;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--main-color);
+    align-items: center;
+}
+
+.navigation li {
+    flex: 1 1 auto;
+}
+
+.navigation li:hover {
+    background-color: var(--secondary-color);
+}
+
+.navigation a {
+    font-weight: 700;
+    display: block;
+    color: var(--primary-text-color);
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+/* ---------- MAIN ---------- */
+
+main {
+    width: 100%;
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* ---------- CARDS ---------- */
+
+.card {
+    background-color: var(--secondary-color);
+    color: var(--primary-text-color);
+    position: relative;
+    z-index: 1;
+
+    width: 320px;
+    max-width: 100%;
+    height: fit-content;
+
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: var(--border-radius);
+}
+
+/* Left card */
+
+.card.info {
+    justify-self: center;
+    align-self: center;
+    background-color: var(--secondary-color);
+}
+
+/* Right card */
+
+.card.data {
+    justify-self: center;
+    align-self: center;
+    background-color: var(--secondary-color);
+}
+
+/* Card headings */
+
+.card h2 {
+    padding: 0.5rem;
+    background-color: var(--text-header-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+/* Card paragraphs */
+
+.card p {
+    font-weight: 700;
+    font-size: 1.3rem;
+    overflow-wrap: break-word;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+    border-top: 1px solid black;
+    margin-top: 15px;
+}
+
+footer p {
+    margin: 0.2rem;
+    font-size: 0.8rem;
+    color: var(--primary-text-color);
+}
+
+/* ---------- MOBILE DESIGN ---------- */
+
+@media screen and (max-width: 600px) {
+
+    header {
+        min-height: 90px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Main layout */
+
+    main {
+        width: 100%;
+        height: auto;
+        min-height: unset;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+
+        align-content: start;
+        justify-items: center;
+
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    /* Cards */
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+        margin: 0;
+        justify-self: center;
+        align-self: auto;
+    }
+
+    .card.info,
+    .card.data {
+        justify-self: center;
+        align-self: auto;
+        margin: 0;
+    }
+
+    /* Text */
+
+    .card p {
+        font-size: 1rem;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+    }
+
+/* ---------- MOBILE NAVIGATION ---------- */
+
+#menu-button {
+    display: block;
+    margin: 0.5rem auto;
+    padding: 0.5rem 1rem;
+
+    font-size: 1.8rem;
+    color: var(--primary-text-color);
+    background-color: var(--secondary-color);
+
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0;
+    gap: 0;
+}
+
+.navigation.open {
+    display: flex;
+}
+
+.navigation li {
+    width: 100%;
+    flex: none;
+}
+
+.navigation a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+    /* Footer */
+
+    footer {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 0.85rem;
+    }
+
