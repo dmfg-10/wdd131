@@ -1,0 +1,152 @@
+
+/* ---------- GENERAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: rgb(3, 109, 147);
+    --secondary-color: rgb(33, 104, 120);
+    --text-header-color: rgb(255, 255, 255);
+    --border-radius: 8px;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    color: #222;
+}
+
+h1 {
+    font-weight: 700;
+    margin: 1rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--text-header-color);
+    padding: 0.8rem 1rem;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+#menu-button {
+    display: block;
+    background: transparent;
+    border: none;
+    color: var(--text-header-color);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.navigation ul {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+}
+
+.navigation.open ul {
+    display: flex;
+}
+
+.navigation a {
+    display: block;
+    color: var(--text-header-color);
+    padding: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    background-color: var(--secondary-color);
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+/* ---------- TEMPLE CARDS ---------- */
+
+.temples-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.temples-container section {
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.temples-container h2 {
+    color: var(--secondary-color);
+    margin-bottom: 0.8rem;
+}
+
+.temples-container p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0.4rem 0;
+    line-height: 1.5;
+}
+
+.temples-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: var(--border-radius);
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-top: 1px solid black;
+    margin-top: 15px;
+}
+
+footer p {
+    margin: 0.2rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-header-color);
+    text-align: center;
+}
