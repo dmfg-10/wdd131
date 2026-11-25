@@ -214,19 +214,122 @@ footer p {
     color: var(--primary-text-color);
 }
 
+
 /* ---------- MOBILE DESIGN ---------- */
 
 @media screen and (max-width: 600px) {
 
+    /* ---------- MOBILE HEADER ---------- */
+
     header {
         min-height: 90px;
+        display: grid;
+        grid-template-columns: 60px minmax(0, 1fr) 60px;
+        grid-template-areas: "logo title nav";
+        align-items: center;
+        overflow: visible;
     }
+
+    /* Logo */
+
+    .logo {
+        grid-area: logo;
+        justify-self: start;
+    }
+
+    .logo img {
+        display: block;
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+        margin: 0.5rem;
+    }
+
+    /* Title */
 
     h1 {
+        grid-area: title;
+        text-align: center;
         font-size: 1.5rem;
+        margin: 0.5rem;
+        padding: 0.5rem;
     }
 
-    /* Main layout */
+    /* Navigation container */
+
+    header nav {
+        grid-area: nav;
+        position: relative;
+        width: 100%;
+        overflow: visible;
+    }
+
+    /* Menu button */
+
+    #menu-button {
+        display: block;
+        margin: 0.5rem auto;
+        padding: 0.5rem;
+
+        font-size: 1.5rem;
+        color: var(--primary-text-color);
+        background-color: var(--secondary-color);
+
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+    }
+
+    /* Navigation menu */
+
+    .navigation {
+        display: none;
+        position: absolute;
+
+        top: 100%;
+        right: 0;
+
+        width: 50vw;
+        box-sizing: border-box;
+
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 0;
+
+        padding: 0;
+        margin: 0;
+
+        background-color: var(--secondary-color);
+        z-index: 1000;
+    }
+
+    /* Open menu */
+
+    .navigation.open {
+        display: flex;
+    }
+
+    /* Menu items */
+
+    .navigation li {
+        width: 100%;
+        flex: none;
+        
+    }
+
+    .navigation a {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 1rem;
+        border: solid beige 1.5px;
+        
+        
+    }
+
+
+    /* ---------- MOBILE MAIN LAYOUT ---------- */
 
     main {
         width: 100%;
@@ -241,9 +344,11 @@ footer p {
 
         padding: 1rem;
         gap: 1.5rem;
+        box-sizing: border-box;
     }
 
-    /* Cards */
+
+    /* ---------- MOBILE CARDS ---------- */
 
     .card {
         width: 100%;
@@ -260,7 +365,8 @@ footer p {
         margin: 0;
     }
 
-    /* Text */
+
+    /* ---------- MOBILE TEXT ---------- */
 
     .card p {
         font-size: 1rem;
@@ -270,93 +376,8 @@ footer p {
         font-size: 1.2rem;
     }
 
-/* ---------- MOBILE NAVIGATION ---------- */
 
-
-
-/* ---------- MOBILE HEADER ---------- */
-
-header {
-    grid-template-columns: 60px 1fr;
-    grid-template-areas:
-        "logo title"
-        "nav nav";
-
-    align-items: center;
-}
-
-/* Logo */
-
-.logo {
-    grid-area: logo;
-    justify-self: start;
-}
-
-.logo img {
-    display: block;
-    width: 50px;
-    height: 50px;
-    max-width: 100%;
-    object-fit: contain;
-    margin: 0.5rem;
-}
-
-/* Title */
-
-h1 {
-    grid-area: title;
-    text-align: right;
-    font-size: 1.5rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
-}
-
-/* Navigation */
-
-header nav {
-    grid-area: nav;
-    width: 100%;
-}
-
-#menu-button {
-    display: block;
-    margin: 0.5rem auto;
-    padding: 0.5rem 1rem;
-
-    font-size: 1.8rem;
-    color: var(--primary-text-color);
-    background-color: var(--secondary-color);
-
-    border: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-}
-
-.navigation {
-    display: none;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 100%;
-    padding: 0;
-    gap: 0;
-}
-
-.navigation.open {
-    display: flex;
-}
-
-.navigation li {
-    width: 100%;
-    flex: none;
-}
-
-.navigation a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-}
-    /* Footer */
+    /* ---------- MOBILE FOOTER ---------- */
 
     footer {
         font-size: 0.85rem;
@@ -366,4 +387,5 @@ header nav {
     footer p {
         font-size: 0.85rem;
     }
+
 }
