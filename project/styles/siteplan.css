@@ -82,13 +82,14 @@ h2 {
 }
 
 .wireframe {
-    align-items: center;
+padding: 1rem 0 0 3rem;
 }
 
 .wireframe img {
 
     width: 450px;
     height: auto;
+
 
 }
 
