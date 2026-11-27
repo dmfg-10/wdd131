@@ -9,11 +9,17 @@
 }
 
 :root {
-    --main-color: rgb(123, 126, 53);
-    --secondary-color: rgb(82, 22, 49);
-    --text-header-color: rgb(116, 111, 47);
-    --primary-text-color: rgb(255, 255, 255);
-    --secondary-text-color: rgb(0, 0, 0);
+    --main-color: #7B7E35;
+    --secondary-color: #521631;
+
+    --accent-color: #D9A441;
+    --sage-color: #A6A078;
+
+    --background-color: #29251F;
+    --card-background: #521631;
+
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: #F4EBDD;
     --border-radius: 8px;
     --font-family: "Lato", sans-serif;
 }
@@ -116,7 +122,8 @@ nav {
 }
 
 .navigation li:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
+   
 }
 
 .navigation a {
@@ -131,6 +138,7 @@ nav {
 .navigation a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
+     color: var(--background-color) ;
 }
 /* ---------- MAIN ---------- */
 
