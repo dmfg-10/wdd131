@@ -83,14 +83,20 @@ h2 {
 
 .wireframe {
 padding: 1rem 0 0 3rem;
+display: grid;
+grid-template-columns: 1fr 1fr;
+
+gap: 1.5rem;
 }
 
-.wireframe img {
-
+.wireframe .web img {
     width: 450px;
     height: auto;
+}
+.wireframe .mobile img {
 
-
+    width: 250px;
+    height: 432px;
 }
 
 main span {
